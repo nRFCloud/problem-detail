@@ -9,13 +9,12 @@ import {
 } from '@sinclair/typebox'
 import { HttpStatusCode, StatusCode } from './HttpStatusCode.ts'
 
-const Context =
-	'https://datatracker.ietf.org/doc/draft-ietf-httpapi-rfc7807bis/'
+const Context = 'https://datatracker.ietf.org/doc/rfc9457/'
 
 /**
  * Problem Details Object
  *
- * @see https://datatracker.ietf.org/doc/draft-ietf-httpapi-rfc7807bis/
+ * @see https://datatracker.ietf.org/doc/rfc9457/
  */
 export const ProblemDetail: TObject<{
 	'@context': TLiteral<typeof Context>
@@ -35,8 +34,7 @@ export const ProblemDetail: TObject<{
 	},
 	{
 		title: 'Problem Detail',
-		description:
-			'See see https://datatracker.ietf.org/doc/draft-ietf-httpapi-rfc7807bis/',
+		description: 'See see https://datatracker.ietf.org/doc/rfc9457/',
 	},
 )
 

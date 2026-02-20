@@ -1,7 +1,7 @@
 {
   "name": "@nrfcloud/problem-detail",
   "version": "0.0.0-development",
-  "description": "Helper function for implementing https://datatracker.ietf.org/doc/draft-ietf-httpapi-rfc7807bis/.",
+  "description": "Helper function for implementing https://datatracker.ietf.org/doc/rfc9457/.",
   "homepage": "https://github.com/nrfcloud/problem-detail#readme",
   "bugs": {
     "url": "https://github.com/nrfcloud/problem-detail/issues"

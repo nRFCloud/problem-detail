@@ -2,8 +2,7 @@
 
 <https://jsr.io/@nrfcloud/problem-detail>
 
-Helper function for implementing
-<https://datatracker.ietf.org/doc/draft-ietf-httpapi-rfc7807bis/>.
+Helper function for implementing <https://datatracker.ietf.org/doc/rfc9457/>.
 
 Use problem detail to carry machine-readable details of errors in HTTP response
 content.
