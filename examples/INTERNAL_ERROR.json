@@ -1,6 +1,6 @@
 {
   "@context": "https://datatracker.ietf.org/doc/rfc9457/",
-  "type": "https://hello.nrfcloud.com/errors/InternalError",
+  "type": "https://nrfcloud.com/error/InternalError",
   "title": "An internal error occurred.",
   "status": 500
 }
