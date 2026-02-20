@@ -1,4 +1,4 @@
-import { Type, type Static } from '@sinclair/typebox'
+import { Type, type Static, type TObject } from '@sinclair/typebox'
 import { StatusCode } from './HttpStatusCode.ts'
 
 const Context =
@@ -21,7 +21,7 @@ export class ProblemDetailError extends Error {
  *
  * @see https://datatracker.ietf.org/doc/draft-ietf-httpapi-rfc7807bis/
  */
-export const ProblemDetail = Type.Object(
+export const ProblemDetail: TObject = Type.Object(
 	{
 		'@context': Type.Literal(Context),
 		'@id': Type.Optional(Type.String()),

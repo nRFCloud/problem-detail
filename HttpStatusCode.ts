@@ -1,4 +1,4 @@
-import { Type } from '@sinclair/typebox'
+import { Type, type TEnum } from '@sinclair/typebox'
 
 /**
  * @see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
@@ -42,4 +42,5 @@ export enum HttpStatusCode {
 	INTERNAL_SERVER_ERROR = 500,
 }
 
-export const StatusCode = Type.Enum(HttpStatusCode)
+export const StatusCode: TEnum<typeof HttpStatusCode> =
+	Type.Enum(HttpStatusCode)
