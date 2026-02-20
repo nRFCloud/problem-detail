@@ -9,7 +9,7 @@ import {
 } from '@sinclair/typebox'
 import { HttpStatusCode, StatusCode } from './HttpStatusCode.ts'
 
-const Context = 'https://datatracker.ietf.org/doc/rfc9457/'
+export const Context = 'https://datatracker.ietf.org/doc/rfc9457/'
 
 /**
  * Problem Details Object
