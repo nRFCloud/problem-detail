@@ -1,0 +1,6 @@
+{
+  "@context": "https://datatracker.ietf.org/doc/draft-ietf-httpapi-rfc7807bis/",
+  "type": "https://hello.nrfcloud.com/errors/InternalError",
+  "title": "An internal error occurred.",
+  "status": 500
+}

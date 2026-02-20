@@ -1,0 +1,7 @@
+{
+  "@context": "https://datatracker.ietf.org/doc/draft-ietf-httpapi-rfc7807bis/",
+  "@id": "55480460-6b90-4e81-a875-a1b09f72c877",
+  "type": "https://hello.nrfcloud.com/errors/BadRequest",
+  "title": "Validation error",
+  "status": 400
+}
