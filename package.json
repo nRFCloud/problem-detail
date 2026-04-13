@@ -19,10 +19,10 @@
   "main": "export.ts",
   "devDependencies": {
     "@bifravst/prettier-config": "1.1.17",
-    "@nrfcloud/validate-with-typebox": "npm:@jsr/nrfcloud__validate-with-typebox@^1.0.2",
-    "@types/node": "25.3.3",
-    "@typescript/native-preview": "7.0.0-dev.20260220.1",
-    "prettier": "3.8.1"
+    "@nrfcloud/validate-with-typebox": "npm:@jsr/nrfcloud__validate-with-typebox@^1.0.3",
+    "@types/node": "25.6.0",
+    "@typescript/native-preview": "7.0.0-dev.20260413.1",
+    "prettier": "3.8.2"
   },
   "prettier": "@bifravst/prettier-config",
   "release": {
@@ -41,6 +41,6 @@
     "npm": ">=11"
   },
   "dependencies": {
-    "@sinclair/typebox": "0.34.48"
+    "@sinclair/typebox": "0.34.49"
   }
 }
