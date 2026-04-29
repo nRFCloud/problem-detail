@@ -22,6 +22,13 @@ export enum HttpStatusCode {
 	 */
 	BAD_REQUEST = 400,
 	/**
+	 * Similar to 403 Forbidden, but specifically for use when authentication is
+	 * required and has failed or has not yet been provided. 401 semantically
+	 * means "unauthenticated", the user does not have valid authentication
+	 * credentials for the target resource.
+	 */
+	UNAUTHORIZED = 401,
+	/**
 	 * The request contained valid data and was understood by the server, but the server is refusing action.
 	 * The request should not be repeated.
 	 */
