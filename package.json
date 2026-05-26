@@ -37,8 +37,8 @@
     ]
   },
   "engines": {
-    "node": ">=24",
-    "npm": ">=11"
+    "node": ">=24 <25",
+    "npm": ">=11 <12"
   },
   "dependencies": {
     "@sinclair/typebox": "0.34.49"
