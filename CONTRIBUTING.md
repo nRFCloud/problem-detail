@@ -5,10 +5,9 @@ library, distributed via [JSR](https://jsr.io/@nrfcloud/problem-detail).
 
 ## Development setup
 
-1. Ensure you
-   [have access to the NPM repositories](https://nordicsemi.atlassian.net/wiki/spaces/MFLT/pages/1727136233/Nordic+Engineering+Tools+Setup+go+eng-tools#NPM)
-   and
-   [GitHub push access](https://nordicsemi.atlassian.net/wiki/spaces/MFLT/pages/1727136233/Nordic+Engineering+Tools+Setup+go+eng-tools#nRFCloud-Organization).
+Ensure you
+[have GitHub push access](https://nordicsemi.atlassian.net/wiki/spaces/MFLT/pages/1727136233/Nordic+Engineering+Tools+Setup+go+eng-tools#nRFCloud-Organization).
+
 1. Get your environment set up by running `npm ci`.
 1. Make your changes locally in a git clone of the repo in your own branch.
 1. As you go, commit along the way so that you get type checking, testing, etc.
@@ -39,10 +38,6 @@ library, distributed via [JSR](https://jsr.io/@nrfcloud/problem-detail).
 1. Once approved and CI passes, rebase or squash away!
 
 ## Releasing a new version
-
-> [!NOTE]  
-> Never run `semantic-release` or publish to JSR by hand. Publishing happens
-> automatically on merge to `main`.
 
 1. The
    [`semantic-release` in the Test and Release workflow](.github/workflows/test-and-release.yaml)
