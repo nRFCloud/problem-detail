@@ -41,6 +41,6 @@
     "npm": ">=11.7.0 <12"
   },
   "dependencies": {
-    "@sinclair/typebox": "0.34.49"
+    "@sinclair/typebox": "0.34.52"
   }
 }
