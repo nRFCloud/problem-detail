@@ -20,9 +20,9 @@ Ensure you
 > [`.github/workflows/test-and-release.yaml`](.github/workflows/test-and-release.yaml),
 > which runs the type check and the tests for every commit.
 
-1. Run `npx tsgo` to type-check the project. This uses the
-   [TypeScript native preview](https://www.npmjs.com/package/@typescript/native-preview)
-   compiler against the settings in [`tsconfig.json`](tsconfig.json).
+1. Run `npx tsc` to type-check the project. This uses the
+   [TypeScript 7](https://www.npmjs.com/package/typescript) compiler against the
+   settings in [`tsconfig.json`](tsconfig.json).
 1. Run `npm test` to run the unit tests. This uses the built-in Node.js test
    runner against the `*.spec.ts` files (e.g.
    [`errors.spec.ts`](errors.spec.ts), [`examples.spec.ts`](examples.spec.ts)).
