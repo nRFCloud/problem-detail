@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: ">=24.18.1 <25"
           cache: "npm"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install NPM version specified in package.json
         uses: ./.github/actions/install-npm
@@ -33,6 +34,4 @@ jobs:
       - run: npm test
 
       - name: Semantic release
-        run: |
-          npm install -D @sebbo2002/semantic-release-jsr
-          npx semantic-release
+        run: npx semantic-release

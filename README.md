@@ -1,6 +1,6 @@
 # `@nrfcloud/problem-detail`
 
-<https://jsr.io/@nrfcloud/problem-detail>
+<https://www.npmjs.com/package/@nrfcloud/problem-detail>
 
 Helper function for implementing <https://datatracker.ietf.org/doc/rfc9457/>.
 
@@ -10,7 +10,7 @@ content.
 ## Install with NPM
 
 ```bash
-npx jsr add (--save-prod|--save-dev) @nrfcloud/problem-detail
+npm i (--save-prod|--save-dev) @nrfcloud/problem-detail
 ```
 
 ## Usage

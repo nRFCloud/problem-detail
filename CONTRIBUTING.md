@@ -1,7 +1,8 @@
 # Contributing
 
 Thank you for contributing to `@nrfcloud/problem-detail`! This is a published
-library, distributed via [JSR](https://jsr.io/@nrfcloud/problem-detail).
+library, distributed via
+[NPM](https://www.npmjs.com/package/@nrfcloud/problem-detail).
 
 ## Development setup
 
@@ -37,13 +38,26 @@ Ensure you
 1. Get the code reviewed.
 1. Once approved and CI passes, rebase or squash away!
 
+## Building the NPM package
+
+The package is published as compiled JavaScript with type declarations in the
+`npm/` folder, which is created by the `prepublishOnly` hook:
+
+1. [`.npm/compile.ts`](.npm/compile.ts) transpiles the TypeScript sources using
+   [`@swc/core`](https://www.npmjs.com/package/@swc/core) and rewrites the `.ts`
+   import specifiers to `.js`.
+1. [TypeScript 7](https://www.npmjs.com/package/typescript) emits the type
+   declarations, using [`.npm/tsconfig.npm.json`](.npm/tsconfig.npm.json).
+
+Run `npm run prepublishOnly` to build it locally.
+
 ## Releasing a new version
 
 1. The
    [`semantic-release` in the Test and Release workflow](.github/workflows/test-and-release.yaml)
    determines the next version from the conventional-commit messages and
-   publishes the package to [JSR](https://jsr.io/@nrfcloud/problem-detail) via
-   [`@sebbo2002/semantic-release-jsr`](https://www.npmjs.com/package/@sebbo2002/semantic-release-jsr).
+   publishes the package to
+   [NPM](https://www.npmjs.com/package/@nrfcloud/problem-detail) via
+   [`@semantic-release/npm`](https://www.npmjs.com/package/@semantic-release/npm).
 1. Once the new version is published, consumers can pick it up by bumping the
-   dependency, e.g.
-   `npx jsr add (--save-prod|--save-dev) @nrfcloud/problem-detail`.
+   dependency, e.g. `npm i (--save-prod|--save-dev) @nrfcloud/problem-detail`.

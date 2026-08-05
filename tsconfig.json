@@ -20,5 +20,7 @@
     "noUnusedLocals": true,
     "allowImportingTsExtensions": true,
     "types": ["node"]
-  }
+  },
+  "exclude": ["npm/**/*"],
+  "include": ["./**/*.ts", "./.npm/*.ts"]
 }
