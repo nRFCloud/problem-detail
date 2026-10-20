@@ -11,7 +11,7 @@ content.
 
 The package is published to the
 [GitHub Packages registry](https://github.com/nRFCloud/problem-detail/pkgs/npm/problem-detail).
-Until all projects have migrated, releases are also published to
+Releases are also published to
 [npm](https://www.npmjs.com/package/@nrfcloud/problem-detail).
 
 To install it, point the `@nrfcloud` scope to it in your project's `.npmrc` and
