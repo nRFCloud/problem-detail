@@ -41,7 +41,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Fallback until all host packages have migrated to GitHub Packages
+      # Also publish to npm, alongside GitHub Packages
       # Must also run if semantic-release failed after @semantic-release/npm
       # bumped the version (e.g. in @semantic-release/github), because the
       # tag is already pushed and the release will not be retried.
