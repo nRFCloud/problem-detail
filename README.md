@@ -1,13 +1,27 @@
 # `@nrfcloud/problem-detail`
 
-<https://www.npmjs.com/package/@nrfcloud/problem-detail>
+<https://github.com/nRFCloud/problem-detail/pkgs/npm/problem-detail>
 
 Helper function for implementing <https://datatracker.ietf.org/doc/rfc9457/>.
 
 Use problem detail to carry machine-readable details of errors in HTTP response
 content.
 
-## Install with NPM
+## Installation
+
+The package is published to the
+[GitHub Packages registry](https://github.com/nRFCloud/problem-detail/pkgs/npm/problem-detail).
+Releases are also published to
+[npm](https://www.npmjs.com/package/@nrfcloud/problem-detail).
+
+To install it, point the `@nrfcloud` scope to it in your project's `.npmrc` and
+[authenticate](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages)
+with a token that has the `read:packages` scope:
+
+```
+@nrfcloud:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+```
 
 ```bash
 npm i (--save-prod|--save-dev) @nrfcloud/problem-detail
