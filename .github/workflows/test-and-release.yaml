@@ -53,4 +53,5 @@ jobs:
             echo "No new release, skipping."
             exit 0
           fi
-          npm publish --registry=https://registry.npmjs.org
+          # The scope registry in .npmrc overrides --registry, so override the scope
+          npm publish --@nrfcloud:registry=https://registry.npmjs.org
