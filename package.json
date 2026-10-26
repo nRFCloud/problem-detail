@@ -35,7 +35,7 @@
   "devDependencies": {
     "@bifravst/prettier-config": "2.0.4",
     "@nrfcloud/validate-with-typebox": "1.0.6",
-    "@swc/core": "1.16.18",
+    "@swc/core": "1.16.20",
     "@types/node": "25.9.9",
     "@typescript/native": "npm:typescript@7.0.2",
     "prettier": "3.9.10",
