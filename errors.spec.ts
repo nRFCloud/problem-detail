@@ -3,9 +3,10 @@ import assert from 'node:assert/strict'
 import { describe, test } from 'node:test'
 import { BadRequestError } from './BadRequestError.ts'
 import { ConflictError } from './ConflictError.ts'
+import { HttpStatusCode } from './HttpStatusCode.ts'
 import { InternalError } from './InternalError.ts'
 import { NotFoundError } from './NotFoundError.ts'
-import { ProblemDetail } from './ProblemDetail.ts'
+import { Context, ProblemDetail } from './ProblemDetail.ts'
 import BAD_REQUEST from './examples/BAD_REQUEST.json' with { type: 'json' }
 import CONFLICT_ERROR from './examples/CONFLICT.json' with { type: 'json' }
 import INTERNAL_ERROR from './examples/INTERNAL_ERROR.json' with { type: 'json' }
@@ -33,4 +34,17 @@ void describe('Error helpers', () => {
 		const result = validator(e)
 		assert.equal('errors' in result, false)
 	})
+})
+
+void describe('ProblemDetail', () => {
+	const validator = validateWithTypeBox(ProblemDetail)
+	for (const [title, status] of [
+		['Locked', HttpStatusCode.LOCKED],
+		['Gateway Timeout', HttpStatusCode.GATEWAY_TIMEOUT],
+	] as const) {
+		void test(`accepts the status ${status} (${title})`, () => {
+			const result = validator({ '@context': Context, title, status })
+			assert.equal('errors' in result, false)
+		})
+	}
 })

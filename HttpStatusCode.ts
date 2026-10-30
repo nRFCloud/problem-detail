@@ -44,9 +44,25 @@ export const HttpStatusCode = {
 	 */
 	CONFLICT: 409,
 	/**
+	 * The resource that is being accessed is locked, for example because another
+	 * request is changing it right now. The request may be repeated once the
+	 * lock is released.
+	 *
+	 * @see https://www.rfc-editor.org/rfc/rfc4918#section-11.3
+	 */
+	LOCKED: 423,
+	/**
 	 * A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
 	 */
 	INTERNAL_SERVER_ERROR: 500,
+	/**
+	 * The server, while acting as a gateway or proxy, did not receive a timely
+	 * response from an upstream server it needed to access in order to complete
+	 * the request.
+	 *
+	 * @see https://www.rfc-editor.org/rfc/rfc9110#section-15.6.5
+	 */
+	GATEWAY_TIMEOUT: 504,
 } as const
 
 export type HttpStatusCode =
