@@ -34,7 +34,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@bifravst/prettier-config": "2.0.4",
+    "@bifravst/prettier-config": "2.0.5",
     "@nrfcloud/validate-with-typebox": "1.1.0",
     "@swc/core": "1.16.20",
     "@types/node": "26.6.5",
