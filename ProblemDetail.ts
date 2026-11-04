@@ -2,10 +2,12 @@ import {
 	Type,
 	type Static,
 	type TEnum,
+	type TInteger,
 	type TLiteral,
 	type TObject,
 	type TOptional,
 	type TString,
+	type TUnion,
 } from '@sinclair/typebox'
 import { HttpStatusCode, StatusCode } from './HttpStatusCode.ts'
 
@@ -20,7 +22,7 @@ export const ProblemDetail: TObject<{
 	'@context': TLiteral<typeof Context>
 	'@id': TOptional<TString>
 	type: TOptional<TString>
-	status: TOptional<TEnum<typeof HttpStatusCode>>
+	status: TOptional<TUnion<[TEnum<typeof HttpStatusCode>, TInteger]>>
 	title: TString
 	detail: TOptional<TString>
 }> = Type.Object(
@@ -28,7 +30,17 @@ export const ProblemDetail: TObject<{
 		'@context': Type.Literal(Context),
 		'@id': Type.Optional(Type.String()),
 		type: Type.Optional(Type.String()),
-		status: Type.Optional(StatusCode),
+		status: Type.Optional(
+			Type.Union([
+				StatusCode,
+				Type.Integer({
+					minimum: 100,
+					maximum: 599,
+					title: 'HTTP Status Code',
+					description: 'Allows any possible HTTP status code',
+				}),
+			]),
+		),
 		title: Type.String(),
 		detail: Type.Optional(Type.String()),
 	},
